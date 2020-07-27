@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+   <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
     <title>관리자페이지 | </title>
 
@@ -18,7 +18,7 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+   
     <!-- bootstrap-progressbar -->
     <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -90,6 +90,15 @@
                       <li><a href="morisjs.html">Moris JS</a></li>
                       <li><a href="echarts.html">ECharts</a></li>
                       <li><a href="other_charts.html">Other Charts</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> 입출고관리 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chartjs.html">품목 관리</a></li>
+                      <li><a href="chartjs2.html">입고 관리</a></li>
+                      <li><a href="morisjs.html">출고 관리</a></li>
+                      <li><a href="echarts.html">재고 관리</a></li>
+                      <li><a href="other_charts.html">반품 관리</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -182,7 +191,7 @@
                   </div>
                 </li>
                 <li class="nav-item" style="padding-left: 15px; padding-top: 5px;">
-                	<a href="#"><i class="fa fa-bookmark-o"></i> 쇼핑몰 바로가기</a>
+                   <a href="#"><i class="fa fa-bookmark-o"></i> 쇼핑몰 바로가기</a>
                 </li>
               </ul>
             </nav>
@@ -278,7 +287,6 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
 
                 <div class="clearfix"></div>
@@ -288,7 +296,7 @@
           </div>
           <br />
 
-		  <div class="col-md-12 col-sm-12 ">
+        <div class="col-md-12 col-sm-12 ">
           <h5> 주문현황 (최근 1개월 기준)</h5>
           </div>
           <div class="row">
@@ -375,16 +383,18 @@
           </div>
 
           </div>
+          
 
 
-          <div class="row">
+
+          
           
             
             <div class="col-md-12 col-sm-12 ">
               <div class="row">
               
               <!-- 도넛차트 -->
-              <div class="col-md-6 col-sm-6 ">
+              <div class="col-md-4 col-sm-6 ">
               <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <div class="x_title">
                   <h2>상품별 매출현황</h2>
@@ -536,7 +546,9 @@
                 
               </div>
             </div>
-          </div>
+          
+          
+          
         </div>
         <!-- /page content -->
 
@@ -591,6 +603,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-	
+   
   </body>
 </html>
