@@ -296,10 +296,16 @@
           </div>
           <br />
 
-        <div class="col-md-12 col-sm-12 ">
+
+		  <!-- 쇼핑몰현황 & 도넛차트 -->
+		  <div class="row">
+		  
+		  <!-- 주문현황&취소/교환/반품/환불 현황 박스모델 -->
+		  <div class="row col-lg-6 col-md-12 col-sm-12">
+          <div class="col-md-12 col-sm-12 ">
           <h5> 주문현황 (최근 1개월 기준)</h5>
           </div>
-          <div class="row">
+          <div class="row col-md-12 col-sm-12">
           <div class="row" style="display: inline-block;">
             <div class="top_tiles">
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
@@ -337,8 +343,9 @@
             </div>
             <div class="clearfix"></div>
           </div>
+          </div>
           
-          
+          <!-- 취소/교환/반품/환불 -->
           <div class="col-md-12 col-sm-12 ">
           <h5> 취소 / 교환 / 반품 / 환불현황 (최근 1개월 기준)</h5>
           </div>
@@ -372,8 +379,8 @@
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 " >
                 <div class="tile-stats" style="width:100%;">
-                  <div class="icon"><i class="fa fa-database"></i></div>
-                  <div class="count">7</div>
+                  <div class="icon" ><i class="fa fa-database"></i></div>
+                  <div class="count" >7</div>
                   <h3>환불</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
@@ -381,174 +388,100 @@
             </div>
           </div>
           </div>
-
           </div>
+          <!-- 취소/교환/반품/환불 끝 -->
+          
+          </div>
+          <!-- 주문현황&취소/교환/반품/환불 현황 박스모델 끝 -->
           
 
 
-
-          
-          
-            
-            <div class="col-md-12 col-sm-12 ">
-              <div class="row">
               
-              <!-- 도넛차트 -->
-              <div class="col-md-4 col-sm-6 ">
-              <div class="x_panel tile fixed_height_320 overflow_hidden">
-                <div class="x_title">
-                  <h2>상품별 매출현황</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <th style="width:37%;">
-                        <p>Top 5</p>
-                      </th>
-                      <th>
-                        <div class="col-lg-7 col-md-7 col-sm-7 ">
-                          <p class="">Product</p>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 ">
-                          <p class="">Progress</p>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i>검정 짧은 철릭 </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>봉황문 분홍 저고리 </p>
-                            </td>
-                            <td>10%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>홑겹 화문 치마 </p>
-                            </td>
-                            <td>20%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>봉황단 치마 </p>
-                            </td>
-                            <td>15%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>봉황문 크롭탑 </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
+          <!-- 도넛차트 -->
+          <div class="col-lg-6 col-md-12 col-sm-12 ">
+          <div class="x_panel tile fixed_height_320 overflow_hidden">
+            <div class="x_title">
+              <h2>상품별 매출현황</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Settings 1</a>
+                      <a class="dropdown-item" href="#">Settings 2</a>
+                    </div>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
             </div>
+            <div class="x_content">
+              <table class="" style="width:100%">
+                <tr>
+                  <th style="width:37%;">
+                    <p>Top 5</p>
+                  </th>
+                  <th>
+                    <div class="col-lg-7 col-md-7 col-sm-7 ">
+                      <p class="">Product</p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 ">
+                      <p class="">Progress</p>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                  </td>
+                  <td>
+                    <table class="tile_info">
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-square blue"></i>검정 짧은 철릭 </p>
+                        </td>
+                        <td>30%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-square green"></i>봉황문 분홍 저고리 </p>
+                        </td>
+                        <td>10%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-square purple"></i>홑겹 화문 치마 </p>
+                        </td>
+                        <td>20%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-square aero"></i>봉황단 치마 </p>
+                        </td>
+                        <td>15%</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p><i class="fa fa-square red"></i>봉황문 크롭탑 </p>
+                        </td>
+                        <td>30%</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- 도넛차트 끝 -->
             
-            <!-- 도넛차트 끝 -->
-              
+        </div>
+        <!-- 쇼핑몰현황 & 도넛차트 끝 -->
+     
+        </div>
 
-
-                <!-- Start to do list -->
-                <div class="col-md-6 col-sm-6 ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>To Do List <small>Sample tasks</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-
-                      <div class="">
-                        <ul class="to_do">
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Schedule meeting with new client </p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End to do list -->
-                
-                
-              </div>
-            </div>
-          
-          
-          
         </div>
         <!-- /page content -->
 
