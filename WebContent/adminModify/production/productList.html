@@ -28,6 +28,13 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    
+    <style type="text/css">
+    .Myinline{
+    	display: inline-block;
+    }
+    </style>
+    
   </head>
 
   <body class="nav-md">
@@ -287,9 +294,52 @@
             <div class="col-md-12 col-sm-12">
 	            <div class="x_panel">
 	            	<div class="x_title">
-	                    <h2>검색창</small></h2>
+	                    <h2>상품 검색창</small></h2>
 	                   
 	                    <div class="clearfix"></div>
+                  	</div>
+                  	
+                  	<div class="x_content">
+                  	<table>
+                  		<tr>
+                  			<td>검색분류</td>
+                  			<td colspan="3"><input type="text"> <button>+</button> <button>-</button> </td>
+                  		</tr>
+                  		<tr>
+                  			<td>상품분류</td>
+                  			<td colspan="3">
+                  				<select class="Myinline">
+                  					<option>Outer</option>
+                  					<option>Top</option>
+                  					<option>Bottom</option>
+                  					<option>Dress</option>
+                  					<option>Africa Collections</option>
+                  					<option>Accessories</option>
+                  					<option>Artworks</option>
+                  					<option>Upcycling</option>
+                  				</select> 
+                  				<section class="Myinline">2</section> 
+                  				<section class="Myinline">3</section>
+                  			</td>
+                  		</tr>
+                  		<tr>
+                  			<td>상품등록일</td>
+                  			<td colspan="3" style="display: inline-block;">
+                  				<input type="text"> 
+                  				<section class="Myinline">1</section> 
+                  				<button class="Myinline">오늘</button>
+                  				<button class="Myinline">3일</button>
+                  				<button class="Myinline">7일</button>
+                  			</td>
+                  		</tr>
+                  		<tr>
+                  			<td>진열상태</td>
+                  			<td>전체, 진열함, 진열안함</td>
+                  			<td>판매상태</td>
+                  			<td>전체, 진열함, 진열안함</td>
+                  		</tr>
+                  		
+                  	</table>
                   	</div>
                   	
 	            </div>
@@ -304,7 +354,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Plus Table Design</small></h2>
+                    <h2>상품 검색 결과</small></h2>
                    
                     <div class="clearfix"></div>
                   </div>
