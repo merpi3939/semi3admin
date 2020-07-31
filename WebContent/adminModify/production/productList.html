@@ -46,6 +46,17 @@
     .Myinline{
     	display: inline-block;
     }
+    
+    .myBtn{
+    }
+    
+    .myTable tr td input,button{
+    	margin: 5px;
+    	padding: 10px;
+    	display: inline-block;
+    }
+    
+    
     </style>
     
   </head>
@@ -313,35 +324,24 @@
                   	</div>
                   	
                   	<div class="x_content">
-                  	<table>
+                  	<table class="myTable">
                   		<tr>
                   			<td>검색분류</td>
-                  			<td colspan="3">
-                  				<select class="Myinline">
+                  			<td >
+                  				<select class="Myinline form-control" >
                   					<option>상품명</option>
                   					<option>상품번호</option>
                   				</select>
-                  				<input type="text">
-                  				<button>+</button>
-                  				<button>-</button>
-                  				
-                  				<div>
-                  				    <div class="form-group">
-				                        <div class='input-group date' id='myDatepicker2'>
-				                            <input type='text' class="form-control" />
-				                            <span class="input-group-addon">
-				                               <span class="glyphicon glyphicon-calendar"></span>
-				                            </span>
-				                        </div>
-				                    </div>
-                  				</div>
-                  				
                   			</td>
+                  			<td colspan="3" >
+                  				<input type="text" class="form-control" >
+                			</td>
+
                   		</tr>
                   		<tr>
                   			<td>상품분류</td>
-                  			<td colspan="3">
-                  				<select class="Myinline">
+                  			<td colspan="4">
+                  				<select class="Myinline form-control">
                   					<option>Outer</option>
                   					<option>Top</option>
                   					<option>Bottom</option>
@@ -351,22 +351,49 @@
                   					<option>Artworks</option>
                   					<option>Upcycling</option>
                   				</select> 
-                  				<section class="Myinline">2</section> 
-                  				<section class="Myinline">3</section>
                   			</td>
                   		</tr>
                   		<tr>
                   			<td>상품등록일</td>
-                  			<td colspan="3" style="display: inline-block;">
-                  				<button class="Myinline">오늘</button>
-                  				<button class="Myinline">3일</button>
-                  				<button class="Myinline">7일</button>
-                  				<button class="Myinline">1개월</button>
-                  				<button class="Myinline">3개월</button>
-                  				<button class="Myinline">1년</button>
-                  				<button class="Myinline">전체</button>
+                  			<td  style="display: inline-block;">
+                  				<button class="Myinline btn btn-info">오늘</button>
+                  				<button class="Myinline btn btn-info">3일</button>
+                  				<button class="Myinline btn btn-info">7일</button>
+                  				<button class="Myinline btn btn-info">1개월</button>
+                  				<button class="Myinline btn btn-info">3개월</button>
+                  				<button class="Myinline btn btn-info">1년</button>
+                  				<button class="Myinline btn btn-info">전체</button>
+                  			</td>
+                  			
+                  			<td>	
+                 				<div class="form-group calInline" >
+			                        <div class='input-group date' id='myDatepicker1'>
+			                            <input type='text' class="form-control"  />
+			                            <span class="input-group-addon">
+			                               <span class="glyphicon glyphicon-calendar"></span>
+			                            </span>
+			                        </div>
+			                    </div>
+				            </td>
+				            
+				            <td>
+			                    <p class="Myinline">~</p>
+				            </td>
+				            
+				            <td>
+	                			<div class="form-group calInline" >
+			                        <div class='input-group date' id='myDatepicker2'>
+			                            <input type='text' class="form-control" />
+			                            <span class="input-group-addon">
+			                               <span class="glyphicon glyphicon-calendar"></span>
+			                            </span>
+			                        </div>
+			                    </div>
+                  			</td>
+                  				
                   			</td>
                   		</tr>
+                  		<!-- 
                   		<tr>
                   			<td>진열상태</td>
                   			<td>
@@ -381,8 +408,13 @@
                   				<input type="radio" class="flat radio" name="iCheck1">진열안함
                   			</td>
                   		</tr>
+                  		 -->
                   		
                   	</table>
+                  	<div style="margin: 0 auto;">
+                  		<button class="myBtn btn btn-success">검색</button>
+                  		<button class="myBtn btn btn-secondary">초기화</button>
+                  	</div>
                   	</div>
                   	
 	            </div>
@@ -1134,8 +1166,12 @@
                 $('#myDatepicker').datetimepicker();
             });
     
+    $('#myDatepicker1').datetimepicker({
+        format: 'YYYY-MM-DD'
+    });
+    
     $('#myDatepicker2').datetimepicker({
-        format: 'DD.MM.YYYY'
+    	format: 'YYYY-MM-DD'
     });
     
     $('#myDatepicker3').datetimepicker({
@@ -1160,6 +1196,9 @@
     $("#datetimepicker7").on("dp.change", function(e) {
         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
     });
+    
+    $("#dateSelect").not("").css("display","inline");
+    
 </script>
 
   </body>
