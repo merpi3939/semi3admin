@@ -1094,7 +1094,7 @@
               </div>
               <!-- 상품목록 끝 -->
 
-
+			
 
 
 
@@ -1163,8 +1163,7 @@
     <!-- Initialize datetimepicker -->
 <script  type="text/javascript">
    $(function () {
-                $('#myDatepicker').datetimepicker();
-            });
+
     
     $('#myDatepicker1').datetimepicker({
         format: 'YYYY-MM-DD'
@@ -1174,30 +1173,8 @@
     	format: 'YYYY-MM-DD'
     });
     
-    $('#myDatepicker3').datetimepicker({
-        format: 'hh:mm A'
-    });
-    
-    $('#myDatepicker4').datetimepicker({
-        ignoreReadonly: true,
-        allowInputToggle: true
-    });
 
-    $('#datetimepicker6').datetimepicker();
-    
-    $('#datetimepicker7').datetimepicker({
-        useCurrent: false
-    });
-    
-    $("#datetimepicker6").on("dp.change", function(e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-    
-    $("#datetimepicker7").on("dp.change", function(e) {
-        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-    
-    $("#dateSelect").not("").css("display","inline");
+   });
     
 </script>
 
