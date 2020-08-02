@@ -37,9 +37,9 @@
           </li>
           <li><a><i class="fa fa-desktop"></i> 주문관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="general_elements.html">전체주문목록</a></li>
-              <li><a href="media_gallery.html">배송관리</a></li>
-              <li><a href="typography.html">취소/교환/반품/환불</a></li>
+              <li><a href="orderList.jsp">전체주문목록</a></li>
+              <li><a href="delivery.jsp">배송관리</a></li>
+              <li><a href="CRTList.jsp">취소/교환/반품/환불</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-table"></i> 고객관리 <span class="fa fa-chevron-down"></span></a>
