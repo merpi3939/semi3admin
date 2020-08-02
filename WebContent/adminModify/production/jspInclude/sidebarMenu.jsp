@@ -33,6 +33,7 @@
             <ul class="nav child_menu">
               <li><a href="productRegister.jsp">상품등록</a></li>
               <li><a href="productList.jsp">상품목록</a></li>
+              <li><a href="productUpdate.jsp">상품수정</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-desktop"></i> 주문관리 <span class="fa fa-chevron-down"></span></a>
@@ -48,6 +49,7 @@
             <ul class="nav child_menu">
               <li><a href="adminAdd.jsp">관리자등록</a></li>
               <li><a href="adminList.jsp">관리자목록</a></li>
+              <li><a href="adminUpdate.jsp">관리자수정</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-clone"></i> 게시판관리 <span class="fa fa-chevron-down"></span></a>

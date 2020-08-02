@@ -46,7 +46,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>상품 등록</h3>
+							<h3>상품 수정</h3>
 						</div>
 
 						<div class="title_right">
@@ -103,8 +103,8 @@
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품번호</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" placeholder="Default Input" style="display: inline;">
-												<button class="btn btn-info" style="display: inline; float: right; margin-top: 5px;">중복확인</button>
+												<input type="text" class="form-control col-md-11" placeholder="Default Input" readonly="readonly">
+
 											</div>
 										</div>
 										<div class="form-group row ">
@@ -212,14 +212,14 @@
 										</div>
 
 										<div class="form-group row ">
-										<label class="control-label col-md-3 col-sm-3 ">상단설명</label>
+										<label class="control-label col-md-3 col-sm-3 ">요약설명</label>
 										<div class="col-md-9 col-sm-9 ">
 											<input type="text" class="form-control" placeholder="Default Input">
 											</div>
 										</div>
 										
 										<div class="form-group row">
-											<label class="control-label col-md-3 col-sm-3 ">하단설명</label>
+											<label class="control-label col-md-3 col-sm-3 ">상세설명</label>
 											<div class="col-md-9 ">
 												<ul class="nav navbar-right panel_toolbox">
 
@@ -249,7 +249,7 @@
 											<div class="col-md-9 col-sm-9  offset-md-3">
 												<button type="button" class="btn btn-primary">취소</button>
 												<button type="reset" class="btn btn-primary">리셋</button>
-												<button type="submit" class="btn btn-success">확인</button>
+												<button type="submit" class="btn btn-success">수정</button>
 											</div>
 										</div>
 

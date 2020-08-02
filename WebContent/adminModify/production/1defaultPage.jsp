@@ -1,3 +1,4 @@
+<%-- 관리자 페이지 기본 양식 입니다. --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
