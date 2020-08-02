@@ -34,7 +34,7 @@
           
             <div class="page-title">
               <div class="title_left">
-                <h3>상품 목록</h3>
+                <h3>관리자 목록</h3>
               </div>
             </div>
 
@@ -42,116 +42,10 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-12  ">
-              
-	            <!-- 검색 시작 -->
-	            <div class="x_panel">
-	            	<div class="x_title">
-	                    <h2>상품 검색창</small></h2>
-	                   
-	                    <div class="clearfix"></div>
-                  	</div>
-                  	
-                  	<div class="x_content">
-                  	<table class="myTable">
-                  		<tr>
-                  			<td>검색분류</td>
-                  			<td >
-                  				<select class="Myinline form-control" >
-                  					<option>상품명</option>
-                  					<option>상품번호</option>
-                  				</select>
-                  			</td>
-                  			<td colspan="3" >
-                  				<input type="text" class="form-control" >
-                			</td>
 
-                  		</tr>
-                  		<tr>
-                  			<td>상품분류</td>
-                  			<td colspan="4">
-                  				<select class="Myinline form-control">
-                  					<option>Outer</option>
-                  					<option>Top</option>
-                  					<option>Bottom</option>
-                  					<option>Dress</option>
-                  					<option>Africa Collections</option>
-                  					<option>Accessories</option>
-                  					<option>Artworks</option>
-                  					<option>Upcycling</option>
-                  				</select> 
-                  			</td>
-                  		</tr>
-                  		<tr>
-                  			<td>상품등록일</td>
-                  			<td  style="display: inline-block;">
-                  				<button class="Myinline btn btn-info">오늘</button>
-                  				<button class="Myinline btn btn-info">7일</button>
-                  				<button class="Myinline btn btn-info">1개월</button>
-                  				<button class="Myinline btn btn-info">1년</button>
-                  				<button class="Myinline btn btn-info">전체</button>
-                  			</td>
-                  			
-                  			<td>	
-                 				<div class="form-group calInline" >
-			                        <div class='input-group date' id='myDatepicker1'>
-			                            <input type='text' class="form-control"  />
-			                            <span class="input-group-addon">
-			                               <span class="glyphicon glyphicon-calendar"></span>
-			                            </span>
-			                        </div>
-			                    </div>
-				            </td>
-				            
-				            <td>
-			                    <p class="Myinline">~</p>
-				            </td>
-				            
-				            <td>
-	                			<div class="form-group calInline" >
-			                        <div class='input-group date' id='myDatepicker2'>
-			                            <input type='text' class="form-control" />
-			                            <span class="input-group-addon">
-			                               <span class="glyphicon glyphicon-calendar"></span>
-			                            </span>
-			                        </div>
-			                    </div>
-                  			</td>
-                  				
-                  			</td>
-                  		</tr>
-                  		<!-- 
-                  		<tr>
-                  			<td>진열상태</td>
-                  			<td>
-                  				<input type="radio"  class="flat radio" name="iCheck">전체
-                  				<input type="radio" class="flat radio" name="iCheck">진열함
-                  				<input type="radio" class="flat radio" name="iCheck">진열안함
-                  			</td>
-                  			<td>판매상태</td>
-                  			<td>
-                  				<input type="radio"  class="flat radio" name="iCheck1">전체
-                  				<input type="radio" class="flat radio" name="iCheck1">진열함
-                  				<input type="radio" class="flat radio" name="iCheck1">진열안함
-                  			</td>
-                  		</tr>
-                  		 -->
-                  		
-                  	</table>
-                  	<div style="margin: 0 auto;">
-                  		<button class="myBtn btn btn-success">검색</button>
-                  		<button class="myBtn btn btn-secondary">초기화</button>
-                  	</div>
-                  	</div>
-                  	
-	            </div>
-	            <!-- 검색 끝 -->
-	            
-	            
-	            <div class="clearfix"></div>
-	            
               	<div class="x_panel">
                   <div class="x_title">
-                    <h2>상품 목록</h2>
+                    <h2>관리자 목록</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -865,7 +759,3 @@
     
   </body>
 </html>
-
-
-
-

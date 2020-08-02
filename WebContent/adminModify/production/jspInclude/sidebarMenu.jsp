@@ -44,6 +44,12 @@
           </li>
           <li><a><i class="fa fa-table"></i> 고객관리 <span class="fa fa-chevron-down"></span></a>
           </li>
+          <li><a><i class="fa fa-table"></i> 관리자관리 <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="adminAdd.jsp">관리자등록</a></li>
+              <li><a href="adminList.jsp">관리자목록</a></li>
+            </ul>
+          </li>
           <li><a><i class="fa fa-clone"></i> 게시판관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="fixed_sidebar.html">게시판 설정</a></li>
@@ -52,8 +58,8 @@
           </li>
           <li><a><i class="fa fa-bar-chart-o"></i> 통계분석 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="chartjs.html">매출 분석</a></li>
-              <li><a href="chartjs2.html">상품 분석</a></li>
+              <li><a href="salesAnalysis.jsp">매출 분석</a></li>
+              <li><a href="productAnalysis.jsp">상품 분석</a></li>
               <li><a href="morisjs.html">Moris JS</a></li>
               <li><a href="echarts.html">ECharts</a></li>
               <li><a href="other_charts.html">Other Charts</a></li>
