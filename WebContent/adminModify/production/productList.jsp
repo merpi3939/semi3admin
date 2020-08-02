@@ -15,6 +15,8 @@
     
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
 
   <body class="nav-md">
@@ -174,21 +176,23 @@
                     <p class="text-muted font-13 m-b-30">
                       Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table.
                     </p>
-					
+                    <button class="btn btn-primary" id="update" name="update">수정</button>
+                    <button class="btn btn-danger" id="delete" name="delete">삭제</button>
+					<form action="producList.jsp" name="product_list" method="post">
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive bulk_action nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
                           <th>
 							 <input type="checkbox" name="check-all" id="check-all" >
 						  </th>
-                          <th>First name</th>
-                          <th>Last name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                          <th>Extn.</th>
+                          <th>상품번호</th>
+                          <th>상품명</th>
+                          <th>이미지</th>
+                          <th>판매가</th>
+                          <th>카테고리</th>
+                          <th>상품사이즈</th>
+                          <th>상단설명</th>
+                          <th>하단설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -196,14 +200,14 @@
                           <td>
 							 <input type="checkbox" name="check" >
 						  </td>
-                          <td>Tiger</td>
-                          <td>Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
-                          <td>5421</td>
+                          <td>1000</td>
+                          <td>봉황문 저고리</td>
+                          <td>이미지</td>
+                          <td>300,000원</td>
+                          <td>top</td>
+                          <td>s</td>
+                          <td>분홍 빛깔 저고리</td>
+                          <td>손세탁 필수</td>
                         </tr>
                         <tr>
                           <td>
@@ -390,7 +394,7 @@
                        
                       </tbody>
                     </table>
-					
+					</form>
 					
                   </div>
                 </div>
@@ -435,6 +439,15 @@
     
     <script type="text/javascript">
     
+    <%-- checkbox 전체 선택 --%>
+	$(function(){
+	    $("#check-all").click(function(){
+	        var chk = $(this).is(":checked");//.attr('checked');
+	        if(chk) $("table input").prop('checked', true);
+	        else  $("table input").prop('checked', false);
+    	});
+	});
+
     </script>
     
     
