@@ -27,12 +27,12 @@
       <div class="menu_section">
         <h3></h3>
         <ul class="nav side-menu">
-          <li><a href="index.html"><i class="fa fa-home"></i> 홈 <span ></span></a>
+          <li><a href="index.jsp"><i class="fa fa-home"></i> 홈 <span ></span></a>
           </li>
           <li><a><i class="fa fa-edit"></i> 상품관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="productRegister.html">상품등록</a></li>
-              <li><a href="productList.html">상품목록</a></li>
+              <li><a href="productRegister.jsp">상품등록</a></li>
+              <li><a href="productList.jsp">상품목록</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-desktop"></i> 주문관리 <span class="fa fa-chevron-down"></span></a>

@@ -38,37 +38,8 @@
 			<%-- 왼쪽 사이드 바 메뉴 --%>
       		<jsp:include page="jspInclude/sidebarMenu.jsp"></jsp:include>
 
-			<!-- top navigation -->
-			<div class="top_nav">
-				<div class="nav_menu">
-					<div class="nav toggle">
-						<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-					</div>
-					<nav class="nav navbar-nav">
-						<ul class=" navbar-right">
-							<li class="nav-item dropdown open" style="padding-left: 15px;">
-								<a href="javascript:;" class="user-profile dropdown-toggle"
-								aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown"
-								aria-expanded="false"> <img src="images/img.jpg" alt="">표소영
-							</a>
-								<div class="dropdown-menu dropdown-usermenu pull-right"
-									aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="javascript:;"> Profile</a> <a
-										class="dropdown-item" href="javascript:;"> <span
-										class="badge bg-red pull-right">50%</span> <span>Settings</span>
-									</a> <a class="dropdown-item" href="javascript:;">Help</a> <a
-										class="dropdown-item" href="login.html"><i
-										class="fa fa-sign-out pull-right"></i> Log Out</a>
-								</div>
-							</li>
-							<li class="nav-item"
-								style="padding-left: 15px; padding-top: 5px;"><a href="#"><i
-									class="fa fa-bookmark-o"></i> 쇼핑몰 바로가기</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<!-- /top navigation -->
+			<%-- 위쪽 nav : 쇼핑몰 바로가기 & 로그인 사용자 --%>
+        	<jsp:include page="jspInclude/top_nav.jsp"></jsp:include>
 
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -296,25 +267,15 @@
 			</div>
 			<!-- /page content -->
 
-			<!-- footer content -->
-			<footer>
-				<div class="pull-right">
-					Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-				</div>
-				<div class="clearfix"></div>
-			</footer>
-			<!-- /footer content -->
+ 			<!-- footer -->
+        	<jsp:include page="jspInclude/footer.jsp"></jsp:include>
+        	
 		</div>
 	</div>
 
-	<!-- jQuery -->
-	<script src="../vendors/jquery/dist/jquery.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- FastClick -->
-	<script src="../vendors/fastclick/lib/fastclick.js"></script>
-	<!-- NProgress -->
-	<script src="../vendors/nprogress/nprogress.js"></script>
+	<%-- java script 리스트 --%>
+	<jsp:include page="jspInclude/defaultJscript.jsp"></jsp:include>
+	
 	<!-- bootstrap-progressbar -->
 	<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 	<!-- iCheck -->
@@ -340,7 +301,6 @@
 	<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 	<!-- starrr -->
 	<script src="../vendors/starrr/dist/starrr.js"></script>
-	<!-- Custom Theme Scripts -->
-	<script src="../build/js/custom.min.js"></script>
+
 
 </body></html>
