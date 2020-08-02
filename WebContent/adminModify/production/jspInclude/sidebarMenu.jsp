@@ -15,7 +15,7 @@
       </div>
       <div class="profile_info">
         <span>환영합니다!</span>
-        <h2>표소영님</h2>
+        <h2>관리자명님</h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
