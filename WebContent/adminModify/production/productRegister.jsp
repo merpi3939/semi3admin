@@ -1,32 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 
+	<jsp:include page="jspInclude/headFile.jsp"></jsp:include>
 
-<!-- Bootstrap -->
-<link href="../vendors/bootstrap/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-<!-- Font Awesome -->
-<link href="../vendors/font-awesome/css/font-awesome.min.css"
-	rel="stylesheet">
-<!-- NProgress -->
-<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-<!-- iCheck -->
-<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-
-<!-- bootstrap-progressbar -->
-<link
-	href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
-	rel="stylesheet">
-<!-- JQVMap -->
-<link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
-<!-- bootstrap-daterangepicker -->
-<link href="../vendors/bootstrap-daterangepicker/daterangepicker.css"
-	rel="stylesheet">
-
-<!-- Custom Theme Style -->
-<link href="../build/css/custom.min.css" rel="stylesheet">
-
+	<!-- iCheck -->
+	<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<!-- bootstrap-progressbar -->
+	<link
+		href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
+		rel="stylesheet">
+	<!-- JQVMap -->
+	<link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+	<!-- bootstrap-daterangepicker -->
+	<link href="../vendors/bootstrap-daterangepicker/daterangepicker.css"
+		rel="stylesheet">
 	<!-- bootstrap-wysiwyg -->
 	<link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
 	<!-- Select2 -->
@@ -44,130 +34,9 @@
 <body class="nav-md">
 	<div class="container body">
 		<div class="main_container">
-			<div class="col-md-3 left_col">
-				<div class="left_col scroll-view">
-					<div class="navbar nav_title" style="border: 0;">
-						<a href="index.html" class="site_title"><i class="fa fa-paw"></i>
-							<span>Gentelella Alela!</span></a>
-					</div>
-
-					<div class="clearfix"></div>
-
-					<!-- menu profile quick info -->
-					<div class="profile clearfix">
-						<div class="profile_pic">
-							<img src="images/img.jpg" alt="..."
-								class="img-circle profile_img">
-						</div>
-						<div class="profile_info">
-							<span>È¯¿µÇÕ´Ï´Ù!</span>
-							<h2>Ç¥¼Ò¿µ´Ô</h2>
-						</div>
-					</div>
-					<!-- /menu profile quick info -->
-
-					<br />
-
-					<!-- sidebar menu -->
-					<div id="sidebar-menu"
-						class="main_menu_side hidden-print main_menu">
-						<div class="menu_section">
-							<h3></h3>
-							<ul class="nav side-menu">
-								<li><a href="index.html"><i class="fa fa-home"></i> È¨ <span></span></a>
-								</li>
-								<li><a><i class="fa fa-edit"></i> »óÇ°°ü¸® <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="form.html">»óÇ°µî·Ï</a></li>
-										<li><a href="form_advanced.html">»óÇ°¸ñ·Ï</a></li>
-									</ul></li>
-								<li><a><i class="fa fa-desktop"></i> ÁÖ¹®°ü¸® <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="general_elements.html">ÀüÃ¼ÁÖ¹®¸ñ·Ï</a></li>
-										<li><a href="media_gallery.html">¹è¼Û°ü¸®</a></li>
-										<li><a href="typography.html">Ãë¼Ò/±³È¯/¹İÇ°/È¯ºÒ</a></li>
-									</ul></li>
-								<li><a><i class="fa fa-table"></i> °í°´°ü¸® <span
-										class="fa fa-chevron-down"></span></a></li>
-								<li><a><i class="fa fa-clone"></i> °Ô½ÃÆÇ°ü¸® <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="fixed_sidebar.html">°Ô½ÃÆÇ ¼³Á¤</a></li>
-										<li><a href="fixed_footer.html">°Ô½Ã¹° °ü¸®</a></li>
-									</ul></li>
-								<li><a><i class="fa fa-bar-chart-o"></i> Åë°èºĞ¼® <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="chartjs.html">¸ÅÃâ ºĞ¼®</a></li>
-										<li><a href="chartjs2.html">»óÇ° ºĞ¼®</a></li>
-										<li><a href="morisjs.html">Moris JS</a></li>
-										<li><a href="echarts.html">ECharts</a></li>
-										<li><a href="other_charts.html">Other Charts</a></li>
-									</ul></li>
-							</ul>
-						</div>
-						<div class="menu_section">
-							<h3>Live On</h3>
-							<ul class="nav side-menu">
-								<li><a><i class="fa fa-bug"></i> Additional Pages <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="e_commerce.html">E-commerce</a></li>
-										<li><a href="projects.html">Projects</a></li>
-										<li><a href="project_detail.html">Project Detail</a></li>
-										<li><a href="contacts.html">Contacts</a></li>
-										<li><a href="profile.html">Profile</a></li>
-									</ul></li>
-								<li><a><i class="fa fa-windows"></i> Extras <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="page_403.html">403 Error</a></li>
-										<li><a href="page_404.html">404 Error</a></li>
-										<li><a href="page_500.html">500 Error</a></li>
-										<li><a href="plain_page.html">Plain Page</a></li>
-										<li><a href="login.html">Login Page</a></li>
-										<li><a href="pricing_tables.html">Pricing Tables</a></li>
-									</ul></li>
-								<li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span
-										class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
-										<li><a href="#level1_1">Level One</a>
-										<li><a>Level One<span class="fa fa-chevron-down"></span></a>
-											<ul class="nav child_menu">
-												<li class="sub_menu"><a href="level2.html">Level
-														Two</a></li>
-												<li><a href="#level2_1">Level Two</a></li>
-												<li><a href="#level2_2">Level Two</a></li>
-											</ul></li>
-										<li><a href="#level1_2">Level One</a></li>
-									</ul></li>
-								<li><a href="javascript:void(0)"><i
-										class="fa fa-laptop"></i> Landing Page <span
-										class="label label-success pull-right">Coming Soon</span></a></li>
-							</ul>
-						</div>
-
-					</div>
-					<!-- /sidebar menu -->
-
-					<!-- /menu footer buttons -->
-					<div class="sidebar-footer hidden-small">
-						<a data-toggle="tooltip" data-placement="top" title="Settings">
-							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-						</a> <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-							<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-						</a> <a data-toggle="tooltip" data-placement="top" title="Lock"> <span
-							class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-						</a> <a data-toggle="tooltip" data-placement="top" title="Logout"
-							href="login.html"> <span class="glyphicon glyphicon-off"
-							aria-hidden="true"></span>
-						</a>
-					</div>
-					<!-- /menu footer buttons -->
-				</div>
-			</div>
+		
+			<%-- ì™¼ìª½ ì‚¬ì´ë“œ ë°” ë©”ë‰´ --%>
+      		<jsp:include page="jspInclude/sidebarMenu.jsp"></jsp:include>
 
 			<!-- top navigation -->
 			<div class="top_nav">
@@ -180,7 +49,7 @@
 							<li class="nav-item dropdown open" style="padding-left: 15px;">
 								<a href="javascript:;" class="user-profile dropdown-toggle"
 								aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown"
-								aria-expanded="false"> <img src="images/img.jpg" alt="">Ç¥¼Ò¿µ
+								aria-expanded="false"> <img src="images/img.jpg" alt="">í‘œì†Œì˜
 							</a>
 								<div class="dropdown-menu dropdown-usermenu pull-right"
 									aria-labelledby="navbarDropdown">
@@ -194,7 +63,7 @@
 							</li>
 							<li class="nav-item"
 								style="padding-left: 15px; padding-top: 5px;"><a href="#"><i
-									class="fa fa-bookmark-o"></i> ¼îÇÎ¸ô ¹Ù·Î°¡±â</a></li>
+									class="fa fa-bookmark-o"></i> ì‡¼í•‘ëª° ë°”ë¡œê°€ê¸°</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -206,7 +75,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>»óÇ° µî·Ï</h3>
+							<h3>ìƒí’ˆ ë“±ë¡</h3>
 						</div>
 
 						<div class="title_right">
@@ -228,7 +97,7 @@
 						<div class="col-md-12  ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>±âº» Á¤º¸ <small>different form elements</small></h2>
+									<h2>ê¸°ë³¸ ì •ë³´ <small>different form elements</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -249,33 +118,33 @@
 									<form class="form-horizontal form-label-left">
 
 										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">»óÇ°ÀÌ¸§<small> (ÇÊ¼ö)</small></label>
+											<label class="control-label col-md-3 col-sm-3 ">ìƒí’ˆì´ë¦„<small> (í•„ìˆ˜)</small></label>
 											<div class="col-md-9 col-sm-9 ">
 												<input type="text" class="form-control" placeholder="Default Input">
 											</div>
 										</div>
 										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">ÆÇ¸Å°¡<small> (ÇÊ¼ö)</small></label>
+											<label class="control-label col-md-3 col-sm-3 ">íŒë§¤ê°€<small> (í•„ìˆ˜)</small></label>
 											<div class="col-md-9 col-sm-9 ">
 												<input type="text" class="form-control" placeholder="Default Input">
 											</div>
 										</div>
 										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">»óÇ°¹øÈ£</label>
+											<label class="control-label col-md-3 col-sm-3 ">ìƒí’ˆë²ˆí˜¸</label>
 											<div class="col-md-9 col-sm-9 ">
 												<input type="text" class="form-control col-md-11" placeholder="Default Input">
-												<button>Áßº¹È®ÀÎ</button>
+												<button>ì¤‘ë³µí™•ì¸</button>
 											</div>
 										</div>
 										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">»óÇ° °¹¼ö</label>
+											<label class="control-label col-md-3 col-sm-3 ">ìƒí’ˆ ê°¯ìˆ˜</label>
 											<div class="col-md-9 col-sm-9 ">
 												<input type="text" class="form-control" placeholder="Default Input">
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="control-label col-md-3 col-sm-3 ">Ä«Å×°í¸®</label>
+											<label class="control-label col-md-3 col-sm-3 ">ì¹´í…Œê³ ë¦¬</label>
 											<div class="col-md-9 col-sm-9 ">
 												<select class="form-control">
 													<option>Choose option</option>
@@ -312,7 +181,7 @@
 
 
 										<div class="form-group row">
-											<label class="col-md-3 col-sm-3  control-label">»óÇ°»çÀÌÁî
+											<label class="col-md-3 col-sm-3  control-label">ìƒí’ˆì‚¬ì´ì¦ˆ
 												<br>
 												<small class="text-navy">Normal Bootstrap elements</small>
 											</label>
@@ -340,7 +209,7 @@
 										</div>
 										
 										<div class="form-group row">
-											<label class="col-md-3 col-sm-3  control-label">»óÇ°ÄÃ·¯
+											<label class="col-md-3 col-sm-3  control-label">ìƒí’ˆì»¬ëŸ¬
 												<br>
 												<small class="text-navy">Normal Bootstrap elements</small>
 											</label>
@@ -372,14 +241,14 @@
 										</div>
 
 										<div class="form-group row ">
-										<label class="control-label col-md-3 col-sm-3 ">¿ä¾à¼³¸í</label>
+										<label class="control-label col-md-3 col-sm-3 ">ìš”ì•½ì„¤ëª…</label>
 										<div class="col-md-9 col-sm-9 ">
 											<input type="text" class="form-control" placeholder="Default Input">
 											</div>
 										</div>
 										
 										<div class="form-group row">
-											<label class="control-label col-md-3 col-sm-3 ">»ó¼¼¼³¸í</label>
+											<label class="control-label col-md-3 col-sm-3 ">ìƒì„¸ì„¤ëª…</label>
 											<div class="col-md-9 ">
 												<ul class="nav navbar-right panel_toolbox">
 

@@ -13,7 +13,7 @@
       	<%-- 왼쪽 사이드 바 메뉴 --%>
       	<jsp:include page="jspInclude/sidebarMenu.jsp"></jsp:include>
       	
-      	<%-- 위쪽 쇼핑몰 바로가기 & 로그인 사용자 --%>
+      	<%-- 위쪽 nav : 쇼핑몰 바로가기 & 로그인 사용자 --%>
         <jsp:include page="jspInclude/top_nav.jsp"></jsp:include>
         
 
