@@ -42,8 +42,11 @@
               <li><a href="delivery.jsp">배송관리</a></li>
               <li><a href="CRTList.jsp">취소/교환/반품/환불</a></li>
             </ul>
-          </li>
           <li><a><i class="fa fa-table"></i> 고객관리 <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="adminList.jsp">고객목록</a></li>
+              <li><a href="adminUpdate.jsp">고객수정</a></li>
+            </ul>
           </li>
           <li><a><i class="fa fa-table"></i> 관리자관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
@@ -52,6 +55,7 @@
               <li><a href="adminUpdate.jsp">관리자수정</a></li>
             </ul>
           </li>
+
           <li><a><i class="fa fa-clone"></i> 게시판관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="fixed_sidebar.html">게시판 설정</a></li>
