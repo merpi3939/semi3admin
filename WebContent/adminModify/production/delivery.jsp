@@ -30,7 +30,7 @@
             <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-12 col-sm-12  ">
+              <div class="col-md-20 col-sm-20  ">
               
               	<!-- 검색창 -->
                 <div class="x_panel">

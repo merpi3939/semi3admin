@@ -4,15 +4,6 @@
 <html>
   <head>
     <jsp:include page="jspInclude/headFile.jsp"></jsp:include>
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    
   </head>
 
   <body class="nav-md">
@@ -38,21 +29,16 @@
 
             <div class="clearfix"></div>
 
-            <!-- 검색 시작 -->
-            <!-- 주문현황&취소/교환/반품/환불 현황 박스모델 -->
-		  <div class="row col-lg-10 col-md-20 col-sm-20">
-          <div class="col-md-10 col-sm-10 ">
-          <h5> 취소/교환/환불반품 현황</h5>
-           <!-- 검색 시작 -->
-            <div class="col-md-30 col-sm-40">
-	            <div class="x_panel">
-	            	<div class="x_title">
-	                    <h2>검색창</h2>
-	                   
-	                    <div class="clearfix"></div>
-                  	</div>
-                  	
-                  	<div class="x_content">
+            <div class="row">
+              <div class="col-md-20 col-sm-20  ">
+              
+              	<!-- 검색창 -->
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>검색창</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
                   	<table class="myTable">
           
                   		<tr>
@@ -84,7 +70,8 @@
 			                        </div>
 			                    </div>
                   			</td>
-
+                  				
+                  			</td>
                   		</tr>
                   		
                   	</table>
@@ -94,61 +81,69 @@
                   	</div>
                   	</div>
                   	
+                </div>
+                <!-- 검색창 끝 -->
+                
+                <!-- 배송 현황 시작 -->
+               	<div class="row">
+	              <div class="col-md-12 col-sm-12  ">
+	                <div class="x_panel">
+	                  <div class="x_title">
+	                    <h2></h2>
+	                    <!-- <div class="clearfix"></div> -->
+	                  </div>
+	                  <div class="x_content">
+	                  <div class="top_tiles">
+			              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+			                <div class="tile-stats">
+			                  <div class="icon"><i class="fa fa-times"></i></div>
+			                  <div class="count">179</div>
+			                  <h3>취소</h3>
+			                  <p>Lorem ipsum psdea itgum rixt.</p>
+			                </div>
+			              </div>
+			              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+			                <div class="tile-stats">
+			                  <div class="icon"><i class="fa fa-exchange"></i></div>
+			                  <div class="count">213</div>
+			                  <h3>교환</h3>
+			                  <p>Lorem ipsum psdea itgum rixt.</p>
+			                </div>
+			              </div>
+			              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+			                <div class="tile-stats">
+			                  <div class="icon"><i class="fa fa-reply"></i></div>
+			                  <div class="count">336</div>
+			                  <h3>환불</h3>
+			                  <p>Lorem ipsum psdea itgum rixt.</p>
+			                </div>
+			              </div>
+			              <div class="animated flipInY col-lg-3 col-md-3 col-sm-5 ">
+			                <div class="tile-stats">
+			                  <div class="icon"><i class="fa fa-database"></i></div>
+			                  <div class="count">274</div>
+			                  <h3>반품</h3>
+			                  <p>Lorem ipsum psdea itgum rixt.</p>
+			                </div> 
+			               </div>             
+			            
+			            <div class="clearfix"></div>
+			          </div>
+	                  </div>
+	                </div>
+	              </div>
 	            </div>
-            </div>
-          </div>
-          <div class="row col-md-20 col-sm-20">
-          <div class="row" style="display: inline-block;">
-            <div class="top_tiles">
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-times"></i></div>
-                  <div class="count">179</div>
-                  <h3>취소</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-exchange"></i></div>
-                  <div class="count">213</div>
-                  <h3>교환</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-reply"></i></div>
-                  <div class="count">336</div>
-                  <h3>환불</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-5 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-database"></i></div>
-                  <div class="count">274</div>
-                  <h3>반품</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div> 
-               </div>             
-            
-            <div class="clearfix"></div>
-          </div>
-           
-          <!-- 검색 끝 -->
-          </div>
-            
-            <!-- 상품목록 시작 -->
-              <div class="col-md-12 col-sm-5 ">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>취소/교환/환불반품 검색 결과</small></h2>
-                    
-                   
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+	            <!-- 배송현황 끝 -->
+	            
+	            <!-- 배송 검색 결과 시작 -->
+	            <div class="row">
+	              <div class="col-md-12 col-sm-12  ">
+	                <div class="x_panel">
+	                  <div class="x_title">
+	                    <h2>취소/교환/환불/반품 검색 결과</h2>
+	                    <div class="clearfix"></div>
+	                  </div>
+	                  <div class="x_content">
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
@@ -805,79 +800,30 @@
                   </div>
               </div>
             </div>
-                </div>
+	                </div>
+	              </div>
+	            </div>
+	            <!-- 배송 검색 결과 끝 -->
+                
+                
               </div>
-              <!-- 상품목록 끝 -->
+            </div>
+            
+            
             
             
           </div>
         </div>
-        </div>
-        </div>
-
         <!-- /page content -->
 
         <!-- footer -->
         <jsp:include page="jspInclude/footer.jsp"></jsp:include>
         
-
-	</div>
+      </div>
     </div>
 
 	<%-- java script 리스트 --%>
 	<jsp:include page="jspInclude/defaultJscript.jsp"></jsp:include>
-	    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Datatables -->
-    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-    <script src="../vendors/jszip/dist/jszip.min.js"></script>
-    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
     
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap-datetimepicker -->    
-    <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <!-- Ion.RangeSlider -->
-    <script src="../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
-    <!-- Bootstrap Colorpicker -->
-    <script src="../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-    <!-- jquery.inputmask -->
-    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <!-- jQuery Knob -->
-    <script src="../vendors/jquery-knob/dist/jquery.knob.min.js"></script>
-    <!-- Cropper -->
-    <script src="../vendors/cropper/dist/cropper.min.js"></script>
-    
-	<!-- Initialize datetimepicker -->
-	<script  type="text/javascript">
-	   $(function () {});
-	
-	    
-	    $('#myDatepicker1').datetimepicker({
-	        format: 'YYYY-MM-DD'
-	    });
-	    
-	    $('#myDatepicker2').datetimepicker({
-	    	format: 'YYYY-MM-DD'
-	    });
-	    
-	
-	
-	    
-	</script>
-	    
   </body>
 </html>
