@@ -142,31 +142,31 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-thumb-tack"></i></div>
                   <div class="count">179</div>
-                  <h3>입금전</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-tags"></i></div>
-                  <div class="count">213</div>
-                  <h3>배송준비중</h3>
+                  <h3>결제완료</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-cubes"></i></div>
-                  <div class="count">336</div>
-                  <h3>배송대기</h3>
+                  <div class="count">213</div>
+                  <h3>상품준비</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-truck"></i></div>
-                  <div class="count">274</div>
+                  <div class="count">336</div>
                   <h3>배송중</h3>
+                  <p>Lorem ipsum psdea itgum rixt.</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-check-square-o"></i></div>
+                  <div class="count">274</div>
+                  <h3>배송완료</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
