@@ -6,18 +6,18 @@ import java.sql.SQLException;
 
 import site.itwill.admindto.productDTO;
 
-public class adminDAO extends JdbcDAO{
-	private static adminDAO _dao;
+public class productAdminDAO extends JdbcDAO{
+	private static productAdminDAO _dao;
 	
-	public adminDAO() {
+	public productAdminDAO() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	static {
-		_dao= new adminDAO();
+		_dao= new productAdminDAO();
 	}
 	
-	public static adminDAO getDao() {
+	public static productAdminDAO getDao() {
 		return _dao;
 	}
 	
