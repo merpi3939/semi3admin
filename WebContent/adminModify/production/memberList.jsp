@@ -70,8 +70,8 @@
                     </p>
                   <%-- form 태그 시작 --%>
                   <form action="" method="post" name="updateForm" id="updateForm">
-                    <button class="btn btn-primary" id="update" name="update">수정</button>
-                    <button class="btn btn-danger" id="delete" name="delete">삭제</button>
+                    <button class="btn btn-primary" id="update" name="update" >수정</button>
+                    <button class="btn btn-danger" id="delete" name="delete" >삭제</button>
 					
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
@@ -461,13 +461,19 @@
 	<%-- update 버튼 클릭 --%>
 	$("#update").click(function(){
 		//수정 페이지 이동
+		location.href="memberUpdate.jsp";
 		
 	});
 	
 	<%-- delete 버튼 클릭 --%>
 	$("#delete").click(function(){
 		//삭제 명령
+		if(confirm("정말로 삭제 하겠습니까?")){
+			location.href="deleteMember.jsp?user_no="+user_no;			
+		}
 	});
+	
+	
     </script>
     
   </body>

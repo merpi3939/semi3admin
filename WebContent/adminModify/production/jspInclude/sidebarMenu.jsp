@@ -44,8 +44,8 @@
             </ul>
           <li><a><i class="fa fa-table"></i> 고객관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="adminList.jsp">고객목록</a></li>
-              <li><a href="adminUpdate.jsp">고객수정</a></li>
+              <li><a href="memberList.jsp">고객목록</a></li>
+              <li><a href="memberUpdate.jsp">고객수정</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-table"></i> 관리자관리 <span class="fa fa-chevron-down"></span></a>
