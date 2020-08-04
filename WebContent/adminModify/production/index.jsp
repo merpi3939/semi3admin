@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+
+%>    
 <!DOCTYPE html>
 <html>
   <head>
@@ -156,7 +159,7 @@
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-truck"></i></div>
+                  <div class="icon"><i class="fa fa-cubes"></i></div>
                   <div class="count">336</div>
                   <h3>배송중</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
