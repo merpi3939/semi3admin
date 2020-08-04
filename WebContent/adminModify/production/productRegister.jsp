@@ -1,6 +1,27 @@
+<%@page import="site.itwill.admindto.productDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	String message=(String)session.getAttribute("message");
+	if(message==null) {
+		message="";		
+	} else {
+		session.removeAttribute("message");
+	}
+	productDTO product=(productDTO)session.getAttribute("product");
+	if(product==null) {
+		product=new productDTO();
+		product.setPd_name("");
+		product.setPd_price(0);
+		product.setPd_cate("");
+		product.setPd_code("");
+		product.setPd_topinf("");
+		product.setPd_botinf("");
+		product.setPd_stock(0);		
+		
+	} else {
+		session.removeAttribute("product");
+	}
 
 %>    
 <!DOCTYPE html>
@@ -89,37 +110,39 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form class="form-horizontal form-label-left">
+									
+									<form class="productRegister">
 
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품이름<small> (필수)</small></label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" placeholder="Default Input">
+												<input type="text" name="name" class="form-control" value="<%=product.getPd_name() %>" >
 											</div>
 										</div>
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">판매가<small> (필수)</small></label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" placeholder="Default Input">
+												<input type="text" name="price" class="form-control" value="<%=product.getPd_price() %>">
 											</div>
 										</div>
 										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">상품번호</label>
+											<label class="control-label col-md-3 col-sm-3 ">상품코드</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" placeholder="Default Input" style="display: inline;">
-												<button class="btn btn-info" style="display: inline; float: right; margin-top: 5px;">중복확인</button>
+												<input type="text" name="code" class="form-control" value="<%=product.getPd_code()%>" style="display: inline;">					
 											</div>
 										</div>
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품 갯수</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" placeholder="Default Input">
+												<input type="text" name="stock" class="form-control" value="<%=product.getPd_stock()%>">
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<label class="control-label col-md-3 col-sm-3 ">카테고리</label>
 											<div class="col-md-9 col-sm-9 ">
+												<input type="text" name="category" class="form-control" value="<%=product.getPd_cate()%>">
+												<!--  
 												<select class="form-control">
 													<option>Choose option</option>
 													<option>Outer</option>
@@ -132,6 +155,7 @@
 													<option>Upcycling</option>
 													<option>Upcycling</option>
 												</select>
+												-->
 											</div>
 										</div>
 										
@@ -161,23 +185,24 @@
 											</label>
 
 											<div class="col-md-9 col-sm-9 ">
-
+											<input type="text" name="size" class="form-control" value="<%=product.getPd_size()%>">
+											<!-- 
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" checked name="iCheck"> S
+														<input type="radio" class="flat" name="size"> S
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="iCheck"> M
+														<input type="radio" class="flat" name="size"> M
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="iCheck"> L
+														<input type="radio" class="flat" name="size"> L
 													</label>
 												</div>
-
+											 -->
 
 											</div>
 										</div>
@@ -189,59 +214,62 @@
 											</label>
 
 											<div class="col-md-9 col-sm-9 " style="display: inline-block;">
-
+											<input type="text" name="color" class="form-control" value="<%=product.getPd_color()%>">
+											<!-- 
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" checked name="iCheck1"> Red
+														<input type="radio" class="flat" name="color"> Red
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="iCheck1"> Black
+														<input type="radio" class="flat" name="color"> Black
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="iCheck1"> Yellow
+														<input type="radio" class="flat" name="color"> Yellow
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="iCheck1"> Blue
+														<input type="radio" class="flat" name="color"> Blue
 													</label>
 												</div>
-												
+												 -->
 											</div>
 										</div>
 
 										<div class="form-group row ">
 										<label class="control-label col-md-3 col-sm-3 ">상단설명</label>
 										<div class="col-md-9 col-sm-9 ">
-											<input type="text" class="form-control" placeholder="Default Input">
+											<input type="text" name="topinf" class="form-control" value="<%=product.getPd_topinf()%>">
 											</div>
 										</div>
 										
 										<div class="form-group row">
 											<label class="control-label col-md-3 col-sm-3 ">하단설명</label>
 											<div class="col-md-9 ">
-												<ul class="nav navbar-right panel_toolbox">
-
+												<input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf()%>">
+												<!-- 
+												<ul class="nav navbar-right panel_toolbox" >
+												
 												</ul>
 												<div class="clearfix"></div>
-												<div class="x_content">
-												<div id="alerts"></div>
+												<div class="x_content" >
+												<div id="alerts" ></div>
 												
 				
 												<div id="editor-one" class="editor-wrapper"></div>
-				
-												<textarea name="descr" id="descr" style="display:none;"></textarea>
-				
+												
+												<textarea name="descr" id="descr" style="display:none;" ></textarea>
+												
 												<br />
 				
 												<div class="ln_solid"></div>
 				
 											</div>
-												
+											 -->	
 												
 											</div>
 										</div>
@@ -250,9 +278,9 @@
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-9 col-sm-9  offset-md-3">
-												<button type="button" class="btn btn-primary">취소</button>
+												<button type="button" class="btn btn-primary" onclick="location.href='index.jsp'">취소</button>
 												<button type="reset" class="btn btn-primary">리셋</button>
-												<button type="submit" class="btn btn-success">확인</button>
+												<button type="submit" class="btn btn-success" onclick="submitCheck();">확인</button>
 											</div>
 										</div>
 
@@ -304,6 +332,54 @@
 	<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 	<!-- starrr -->
 	<script src="../vendors/starrr/dist/starrr.js"></script>
+	<script type="text/javascript">
+	productRegister.no.focus();
+	
+	function submitCheck() {
+		/*
+		if(productRegister.name.value=="") {
+			alert("상품이름을 입력해 주세요.");
+			productRegister.name.focus();
+			return;
+		}
+		
+		
+		if(productRegister.price.value=="") {
+			alert("상품가격을 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
 
+		if(productRegister.code.value=="") {
+			alert("삼품코드를 입력해 주세요.");
+			productRegister.code.focus();
+			return;
+		}
+				
+		if(productRegister.stock.value=="") {
+			alert("주소을 입력해 주세요.");
+			productRegister.stock.focus();
+			return;
+		}
+
+		if(productRegister.topinf.value=="") {
+			alert("상단정보를 입력해 주세요.");
+			productRegister.topinf.focus();
+			return;
+		}
+		
+		if(productRegister.botinf.value=="") {
+			alert("하단정보를 입력해 주세요.");
+			productRegister.botinf.focus();
+			return;
+		}
+		*/
+		
+		productRegister.method="POST";
+		productRegister.action="insertProduct.jsp";
+		productRegister.submit();
+	} 
+		
+	</script>
 
 </body></html>
