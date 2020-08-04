@@ -1,5 +1,20 @@
+<%@page import="site.itwill.admindao.MemberadminDAO"%>
+<%@page import="site.itwill.admindto.MemberDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	//member 테이블에 저장된 모든 일반회원정보를 검색하여 반환하는 DAO 클래스의 메소드 호출
+	List<MemberDTO> memberList=MemberadminDAO.getDAO().selectRegularMember();
+	
+	String message=(String)session.getAttribute("message");
+	if(message==null){
+		message="";
+	} else{
+		session.removeAttribute("message");
+	}
+	
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -79,18 +94,19 @@
                           <th>
 							 <input type="checkbox" name="check-all" id="check-all" >
 						  </th>
-                          <th>First name</th>
-                          <th>Last name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                          <th>Extn.</th>
-                          <th>E-mail</th>
+                          <th>회원번호</th>
+                          <th>회원이름</th>
+                          <th>아이디</th>
+                          <th>전화번호</th>
+                          <th>주소</th>
+                          <th>우편번호</th>
+                          <th>이메일</th>
+                          <th>생일</th>
+                          <th>회원가입일</th>
                         </tr>
                       </thead>
                       <tbody>
+                      	<% %>
                         <tr>
                           <td>
 							 <input type="checkbox" name="check" >
@@ -105,6 +121,8 @@
                           <td>5421</td>
                           <td>t.nixon@datatables.net</td>
                         </tr>
+                        
+                        
                         <tr>
                           <td>
 							 <input type="checkbox" name="check" >
