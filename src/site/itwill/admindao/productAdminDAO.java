@@ -40,7 +40,7 @@ public class productAdminDAO extends JdbcDAO{
 			pstmt.setString(5, product.getPd_topinf());
 			pstmt.setString(6, product.getPd_botinf());
 			pstmt.setInt(7, product.getPd_stock());
-			pstmt.setInt(8, product.getPd_stock());
+			pstmt.setInt(8, product.getPd_price());
 			
 			rows=pstmt.executeUpdate();
 		} catch(SQLException e) {

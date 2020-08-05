@@ -231,21 +231,21 @@
 										<div class="form-group row">
 											<label class="control-label col-md-3 col-sm-3 ">하단설명</label>
 											<div class="col-md-9 ">
-												<input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf() %>">
-												<
+												<!-- <input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf() %>"> -->
+												
 												<ul class="nav navbar-right panel_toolbox" >
 												
 												</ul>
 												<div class="clearfix"></div>
 												<div class="x_content" >
-												<div id="alerts" ></div>
+												<div id="botinf" ></div>
 												
 				
-												<div id="editor-one" class="editor-wrapper"></div>
+												<div  id="botinf" class="editor-wrapper"><input type="hidden" id="botinf" class="form-control" value="<%=product.getPd_botinf() %>"></div>
+									
+												<textarea name="botinf" id="botinf" style="display:none;"></textarea>
 												
-												<textarea name="descr" id="descr" style="display:none;" ></textarea>
-												
-												<br />
+												<br/>
 				
 												<div class="ln_solid"></div>
 				
@@ -361,24 +361,26 @@
 		}
 		*/
 		
-		
+		/*
 		if(productRegister.color.value=="") {
 			alert("상품컬러를 입력해 주세요.");
 			productRegister.price.focus();
 			return;
 		}
+		*/
 		
 		if(productRegister.topinf.value=="") {
 			alert("상단설명 입력해 주세요.");
 			productRegister.price.focus();
 			return;
 		}
-		
+		/*
 		if(productRegister.botinf.value=="") {
 			alert("하단설명을 입력해 주세요.");
 			productRegister.price.focus();
 			return;
 		}
+		*/
 		
 		
 		productRegister.method="POST";
