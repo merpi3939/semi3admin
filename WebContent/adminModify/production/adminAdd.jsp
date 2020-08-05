@@ -107,10 +107,10 @@
 								<div class="col-md-6 col-sm-6 ">
 									<div id="sex" class="btn-group" data-toggle="buttons">
 										<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-											<input type="radio" name="sex" value="male" class="join-btn" checked="checked">  남자 
+											<input type="radio" name="sex" value="남자" class="join-btn" checked="checked">  남자 
 										</label>
 										<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-											<input type="radio" name="sex" value="female" class="join-btn"> 여자
+											<input type="radio" name="sex" value="여자" class="join-btn"> 여자
 										</label>
 									</div>
 								</div>
