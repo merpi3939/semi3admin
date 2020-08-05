@@ -14,6 +14,8 @@
 		product.setPd_name("");
 		product.setPd_price(0);
 		product.setPd_cate("");
+		product.setPd_color("");
+		product.setPd_size("");
 		product.setPd_code("");
 		product.setPd_topinf("");
 		product.setPd_botinf("");
@@ -111,7 +113,7 @@
 								<div class="x_content">
 									<br />
 									
-									<form class="productRegister">
+									<form class="productRegister" method="post" action="insertProduct.jsp" >
 
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품이름<small> (필수)</small></label>
@@ -125,12 +127,7 @@
 												<input type="text" name="price" class="form-control" value="<%=product.getPd_price() %>">
 											</div>
 										</div>
-										<div class="form-group row ">
-											<label class="control-label col-md-3 col-sm-3 ">상품코드</label>
-											<div class="col-md-9 col-sm-9 ">
-												<input type="text" name="code" class="form-control" value="<%=product.getPd_code()%>" style="display: inline;">					
-											</div>
-										</div>
+										
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품 갯수</label>
 											<div class="col-md-9 col-sm-9 ">
@@ -250,7 +247,7 @@
 										<div class="form-group row">
 											<label class="control-label col-md-3 col-sm-3 ">하단설명</label>
 											<div class="col-md-9 ">
-												<input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf()%>">
+												<input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf() %>">
 												<!-- 
 												<ul class="nav navbar-right panel_toolbox" >
 												
@@ -280,11 +277,12 @@
 											<div class="col-md-9 col-sm-9  offset-md-3">
 												<button type="button" class="btn btn-primary" onclick="location.href='index.jsp'">취소</button>
 												<button type="reset" class="btn btn-primary">리셋</button>
-												<button type="submit" class="btn btn-success" onclick="submitCheck();">확인</button>
+												<button type="submit" class="btn btn-success">확인</button>
 											</div>
 										</div>
 
 									</form>
+										
 								</div>
 							</div>
 						</div>
@@ -303,6 +301,8 @@
         	
 		</div>
 	</div>
+	
+\
 
 	<%-- java script 리스트 --%>
 	<jsp:include page="jspInclude/defaultJscript.jsp"></jsp:include>
@@ -332,54 +332,55 @@
 	<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 	<!-- starrr -->
 	<script src="../vendors/starrr/dist/starrr.js"></script>
+	
 	<script type="text/javascript">
 	productRegister.no.focus();
-	
+												
 	function submitCheck() {
-		/*
-		if(productRegister.name.value=="") {
-			alert("상품이름을 입력해 주세요.");
-			productRegister.name.focus();
-			return;
-		}
-		
-		
-		if(productRegister.price.value=="") {
-			alert("상품가격을 입력해 주세요.");
-			productRegister.price.focus();
-			return;
-		}
-
-		if(productRegister.code.value=="") {
-			alert("삼품코드를 입력해 주세요.");
-			productRegister.code.focus();
-			return;
-		}
-				
-		if(productRegister.stock.value=="") {
-			alert("주소을 입력해 주세요.");
-			productRegister.stock.focus();
-			return;
-		}
-
-		if(productRegister.topinf.value=="") {
-			alert("상단정보를 입력해 주세요.");
-			productRegister.topinf.focus();
-			return;
-		}
-		
-		if(productRegister.botinf.value=="") {
-			alert("하단정보를 입력해 주세요.");
-			productRegister.botinf.focus();
-			return;
-		}
-		*/
-		
-		productRegister.method="POST";
-		productRegister.action="insertProduct.jsp";
-		productRegister.submit();
-	} 
-		
+	/*
+													if(productRegister.name.value=="") {
+														alert("상품이름을 입력해 주세요.");
+														productRegister.name.focus();
+														return;
+													}
+													
+													
+													if(productRegister.price.value=="") {
+														alert("상품가격을 입력해 주세요.");
+														productRegister.price.focus();
+														return;
+													}
+											
+													if(productRegister.code.value=="") {
+														alert("삼품코드를 입력해 주세요.");
+														productRegister.code.focus();
+														return;
+													}
+															
+													if(productRegister.stock.value=="") {
+														alert("주소을 입력해 주세요.");
+														productRegister.stock.focus();
+														return;
+													}
+											
+													if(productRegister.topinf.value=="") {
+														alert("상단정보를 입력해 주세요.");
+														productRegister.topinf.focus();
+														return;
+													}
+													
+													if(productRegister.botinf.value=="") {
+														alert("하단정보를 입력해 주세요.");
+														productRegister.botinf.focus();
+														return;
+													}
+													*/
+													
+													productRegister.method="POST";
+													productRegister.action="insertProduct.jsp";
+													productRegister.submit();
+					} 
+													
 	</script>
 
 </body></html>
