@@ -113,7 +113,7 @@
 								<div class="x_content">
 									<br />
 									
-									<form class="productRegister" method="post" action="insertProduct.jsp" >
+									<form name="productRegister"  >
 
 										<div class="form-group row ">
 											<label class="control-label col-md-3 col-sm-3 ">상품이름<small> (필수)</small></label>
@@ -138,41 +138,25 @@
 										<div class="form-group row">
 											<label class="control-label col-md-3 col-sm-3 ">카테고리</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" name="category" class="form-control" value="<%=product.getPd_cate()%>">
-												<!--  
-												<select class="form-control">
-													<option>Choose option</option>
-													<option>Outer</option>
-													<option>Top</option>
-													<option>Bottom</option>
-													<option>Dress</option>
-													<option>Africa Collection</option>
-													<option>Accessories</option>
-													<option>Artworks</option>
-													<option>Upcycling</option>
-													<option>Upcycling</option>
+												<!--<input type="text" name="category" class="form-control" value="<%=product.getPd_cate()%>">-->
+												<input type="hidden" name="category" value="<%=product.getPd_cate()%>">
+												<select name="selectBox" class="form-control" onchange="getSelectValue(this.value)">																						
+													<option value="Choose option">Choose option</option>
+													<option value="Outer">Outer</option>
+													<option value="Top">Top</option>
+													<option value="Bottom">Bottom</option>
+													<option value="Dress">Dress</option>
+													<option value="Africa Collection">Africa Collection</option>
+													<option value="Accessories">Accessories</option>
+													<option value="Artworks">Artworks</option>													
 												</select>
-												-->
+												
 											</div>
 										</div>
+									
+											<% System.out.println(request.getParameter("name"));%>
 										
-										
-										<!-- 
-										<div class="form-group row">
-											<label class="control-label col-md-3 col-sm-3 ">Select Multiple</label>
-											<div class="col-md-9 col-sm-9 ">
-												<select class="select2_multiple form-control" multiple="multiple">
-													<option>Choose option</option>
-													<option>Option one</option>
-													<option>Option two</option>
-													<option>Option three</option>
-													<option>Option four</option>
-													<option>Option five</option>
-													<option>Option six</option>
-												</select>
-											</div>
-										</div>
-										 -->
+								
 
 
 										<div class="form-group row">
@@ -182,24 +166,24 @@
 											</label>
 
 											<div class="col-md-9 col-sm-9 ">
-											<input type="text" name="size" class="form-control" value="<%=product.getPd_size()%>">
-											<!-- 
+									
+											 	<input type="hidden" name="radio" class="form-control" value="<%=product.getPd_size()%>">
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="size"> S
+														<input type="radio" class="flat" name="size" value="S"> S
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="size"> M
+														<input type="radio" class="flat" name="size" value="M"> M
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="size"> L
+														<input type="radio" class="flat" name="size" value="L"> L
 													</label>
 												</div>
-											 -->
+											 
 
 											</div>
 										</div>
@@ -211,29 +195,29 @@
 											</label>
 
 											<div class="col-md-9 col-sm-9 " style="display: inline-block;">
-											<input type="text" name="color" class="form-control" value="<%=product.getPd_color()%>">
-											<!-- 
+											<input type="hidden" name="radio" class="form-control" value="<%=product.getPd_color()%>">
+											
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="color"> Red
+														<input type="radio" class="flat" name="color" value="Red"> Red
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="color"> Black
+														<input type="radio" class="flat" name="color" value="Black"> Black
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="color"> Yellow
+														<input type="radio" class="flat" name="color" value="Yellow"> Yellow
 													</label>
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" name="color"> Blue
+														<input type="radio" class="flat" name="color" value="Blue"> Blue
 													</label>
 												</div>
-												 -->
+												 
 											</div>
 										</div>
 
@@ -248,7 +232,7 @@
 											<label class="control-label col-md-3 col-sm-3 ">하단설명</label>
 											<div class="col-md-9 ">
 												<input type="text" name="botinf" class="form-control" value="<%=product.getPd_botinf() %>">
-												<!-- 
+												<
 												<ul class="nav navbar-right panel_toolbox" >
 												
 												</ul>
@@ -266,7 +250,7 @@
 												<div class="ln_solid"></div>
 				
 											</div>
-											 -->	
+											 
 												
 											</div>
 										</div>
@@ -277,7 +261,7 @@
 											<div class="col-md-9 col-sm-9  offset-md-3">
 												<button type="button" class="btn btn-primary" onclick="location.href='index.jsp'">취소</button>
 												<button type="reset" class="btn btn-primary">리셋</button>
-												<button type="submit" class="btn btn-success">확인</button>
+												<button type="button" class="btn btn-success" onclick="submitCheck();">확인</button>
 											</div>
 										</div>
 
@@ -334,52 +318,73 @@
 	<script src="../vendors/starrr/dist/starrr.js"></script>
 	
 	<script type="text/javascript">
-	productRegister.no.focus();
+	
 												
+	
+	function getSelectValue(val) {
+		 document.productRegister.category.value = val;
+	}
+	 
+	
 	function submitCheck() {
-	/*
-													if(productRegister.name.value=="") {
-														alert("상품이름을 입력해 주세요.");
-														productRegister.name.focus();
-														return;
-													}
-													
-													
-													if(productRegister.price.value=="") {
-														alert("상품가격을 입력해 주세요.");
-														productRegister.price.focus();
-														return;
-													}
-											
-													if(productRegister.code.value=="") {
-														alert("삼품코드를 입력해 주세요.");
-														productRegister.code.focus();
-														return;
-													}
-															
-													if(productRegister.stock.value=="") {
-														alert("주소을 입력해 주세요.");
-														productRegister.stock.focus();
-														return;
-													}
-											
-													if(productRegister.topinf.value=="") {
-														alert("상단정보를 입력해 주세요.");
-														productRegister.topinf.focus();
-														return;
-													}
-													
-													if(productRegister.botinf.value=="") {
-														alert("하단정보를 입력해 주세요.");
-														productRegister.botinf.focus();
-														return;
-													}
-													*/
-													
-													productRegister.method="POST";
-													productRegister.action="insertProduct.jsp";
-													productRegister.submit();
-					} 
+	
+		if(productRegister.name.value=="") {
+			alert("상품이름을 입력해 주세요.");
+			productRegister.name.focus();
+			return;
+		}
+																										
+		if(productRegister.price.value==0) {
+			alert("상품가격을 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		
+		if(productRegister.stock.value==0) {
+			alert("상품갯수를 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		
+		/*
+		if(productRegister.category.value=="") {
+			alert("카테고리를 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		*/
+		/*
+		if(productRegister.size.value=="") {
+			alert("상품 사이즈를 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		*/
+		
+		
+		if(productRegister.color.value=="") {
+			alert("상품컬러를 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		
+		if(productRegister.topinf.value=="") {
+			alert("상단설명 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		
+		if(productRegister.botinf.value=="") {
+			alert("하단설명을 입력해 주세요.");
+			productRegister.price.focus();
+			return;
+		}
+		
+		
+		productRegister.method="POST";
+		productRegister.action="insertProduct.jsp";
+		productRegister.submit();
+	} 
 													
 	</script>
 

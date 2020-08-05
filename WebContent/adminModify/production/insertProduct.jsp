@@ -36,6 +36,6 @@
 	
 	productAdminDAO.getDao().insertProduct(product);
 	
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("productList.jsp");
 
 %>

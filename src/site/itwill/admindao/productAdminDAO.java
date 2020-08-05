@@ -29,7 +29,9 @@ public class productAdminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="INSERT INTO PRODUCT VALUES(1,?,?,?,?,?,?,?,?)";
+			String sql="INSERT INTO PRODUCT VALUES((SELECT LPAD((NVL(MAX(PD_NO), 0) + 1), 8, '0') PD_NO\r\n" + 
+					"             FROM PRODUCT)\r\n" + 
+					",?,?,?,?,?,?,?,?)";
 			pstmt=con.prepareStatement(sql);
 			pstmt.setString(1, product.getPd_cate());
 			pstmt.setString(2, product.getPd_name());
