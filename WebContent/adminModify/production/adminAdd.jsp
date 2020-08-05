@@ -66,51 +66,51 @@
 					</div>
 					<div class="x_content">
 						<br />
-						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="adminInsert.jsp" method="post">
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="id">아이디 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="id" required="required" class="form-control ">
+									<input type="text" id="id" name ="id" required="required" class="form-control ">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="password">비밀번호 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="password" id="password" required="required" class="form-control ">
+									<input type="password" id="password" name="password" required="required" class="form-control ">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="email">이메일 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="email" required="required" class="form-control ">
+									<input type="text" id="email" name="email" required="required" class="form-control ">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">이름 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="last-name" name="name" required="required" class="form-control">
+									<input type="text" id="name" name="name" required="required" class="form-control">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="address">주소 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="last-name" name="address" required="required" class="form-control">
+									<input type="text" id="address" name="address" required="required" class="form-control">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="col-form-label col-md-3 col-sm-3 label-align">성별</label>
 								<div class="col-md-6 col-sm-6 ">
-									<div id="gender" class="btn-group" data-toggle="buttons">
+									<div id="sex" class="btn-group" data-toggle="buttons">
 										<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-											<input type="radio" name="gender" value="male" class="join-btn">  남자 
+											<input type="radio" name="sex" value="남자" class="join-btn" checked="checked">  남자 
 										</label>
 										<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-											<input type="radio" name="gender" value="female" class="join-btn"> 여자
+											<input type="radio" name="sex" value="여자" class="join-btn"> 여자
 										</label>
 									</div>
 								</div>
@@ -119,7 +119,7 @@
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="phone">전화번호 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="last-name" name="phone" required="required" class="form-control">
+									<input type="text" id="phone" name="phone" required="required" class="form-control">
 								</div>
 							</div>
 							
@@ -127,7 +127,7 @@
 								<label class="col-form-label col-md-3 col-sm-3 label-align">생년월일 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input id="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
+									<input id="birthday" name="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
 									<script>
 										function timeFunctionLong(input) {
 											setTimeout(function() {
@@ -141,13 +141,13 @@
 								<label class="col-form-label col-md-3 col-sm-3 label-align" for="zip">우편번호 <span class="required"></span>
 								</label>
 								<div class="col-md-6 col-sm-6 ">
-									<input type="text" id="last-name" name="zip" required="required" class="form-control">
+									<input type="text" id="zip" name="zip" required="required" class="form-control">
 								</div>
 							</div>
 							
-							<%-- 관리자 여부: true-관리자, false-일반회원 --%>
+							<%-- 관리자 여부: 1-관리자, 0-일반회원 --%>
 							<div>
-								<input type="hidden" id="admin" value=true>
+								<input type="hidden" id="admin" name="admin" value="1">
 							</div>
 							
 							<div class="ln_solid"></div>

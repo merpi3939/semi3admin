@@ -54,7 +54,7 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="select * from member where user_adim='0' order by user_no";
+			String sql="select * from member where user_admin='0' order by user_no";
 			pstmt=con.prepareStatement(sql);
 			
 			rs=pstmt.executeQuery();
@@ -63,25 +63,25 @@ public class MemberadminDAO extends JdbcDAO{
 				
 				MemberDTO member = new MemberDTO();
 
-				member.setUser_addr(rs.getString("user_addr"));
-				member.setUser_admin(rs.getString("user_admin"));
-				member.setUser_birth(rs.getString("user_birth"));
-				member.setUser_deldate(rs.getDate("user_deldate"));
-				member.setUser_delete(rs.getString("user_delete"));
-				member.setUser_email(rs.getString("user_email"));
-				member.setUser_id(rs.getString("user_id"));
-				member.setUser_joindate(rs.getDate("user_joindate"));
-				member.setUser_name(rs.getString("user_name"));
-				member.setUser_no(rs.getString("user_no"));
-				member.setUser_passwd(rs.getString("user_passwd"));
-				member.setUser_phone(rs.getString("user_phone"));
-				member.setUser_sex(rs.getString("user_sex"));
-				member.setUser_zip(rs.getString("user_zip"));
+				member.setUserAddr(rs.getString("user_addr"));
+				member.setUserAdmin(rs.getString("user_admin"));
+				member.setUserBirth(rs.getString("user_birth"));
+				member.setUserDeldate(rs.getString("user_deldate"));
+				member.setUserDelete(rs.getString("user_delete"));
+				member.setUserEmail(rs.getString("user_email"));
+				member.setUserId(rs.getString("user_id"));
+				member.setUserJoindate(rs.getString("user_joindate"));
+				member.setUserName(rs.getString("user_name"));
+				member.setUserNo(rs.getString("user_no"));
+				member.setUserPasswd(rs.getString("user_passwd"));
+				member.setUserPhone(rs.getString("user_phone"));
+				member.setUserSex(rs.getString("user_sex"));
+				member.setUserZip(rs.getString("user_zip"));
 				
 				memberList.add(member);
 			}
 		} catch (SQLException e) {
-			System.out.println("[에러] selectMember() 메소드 SQL 명령 오류 = "+e.getMessage());
+			System.out.println("[에러] selectRegularMember() 메소드 SQL 명령 오류 = "+e.getMessage());
 		} finally {
 			close(con, pstmt, rs);
 		}
@@ -100,7 +100,7 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="select * from member where user_adim='1' order by user_no";
+			String sql="select * from member where user_admin='1' order by user_no";
 			pstmt=con.prepareStatement(sql);
 			
 			rs=pstmt.executeQuery();
@@ -109,25 +109,25 @@ public class MemberadminDAO extends JdbcDAO{
 				
 				MemberDTO member = new MemberDTO();
 
-				member.setUser_addr(rs.getString("user_addr"));
-				member.setUser_admin(rs.getString("user_admin"));
-				member.setUser_birth(rs.getString("user_birth"));
-				member.setUser_deldate(rs.getDate("user_deldate"));
-				member.setUser_delete(rs.getString("user_delete"));
-				member.setUser_email(rs.getString("user_email"));
-				member.setUser_id(rs.getString("user_id"));
-				member.setUser_joindate(rs.getDate("user_joindate"));
-				member.setUser_name(rs.getString("user_name"));
-				member.setUser_no(rs.getString("user_no"));
-				member.setUser_passwd(rs.getString("user_passwd"));
-				member.setUser_phone(rs.getString("user_phone"));
-				member.setUser_sex(rs.getString("user_sex"));
-				member.setUser_zip(rs.getString("user_zip"));
+				member.setUserAddr(rs.getString("user_addr"));
+				member.setUserAdmin(rs.getString("user_admin"));
+				member.setUserBirth(rs.getString("user_birth"));
+				member.setUserDeldate(rs.getString("user_deldate"));
+				member.setUserDelete(rs.getString("user_delete"));
+				member.setUserEmail(rs.getString("user_email"));
+				member.setUserId(rs.getString("user_id"));
+				member.setUserJoindate(rs.getString("user_joindate"));
+				member.setUserName(rs.getString("user_name"));
+				member.setUserNo(rs.getString("user_no"));
+				member.setUserPasswd(rs.getString("user_passwd"));
+				member.setUserPhone(rs.getString("user_phone"));
+				member.setUserSex(rs.getString("user_sex"));
+				member.setUserZip(rs.getString("user_zip"));
 				
 				memberList.add(member);
 			}
 		} catch (SQLException e) {
-			System.out.println("[에러] selectMember() 메소드 SQL 명령 오류 = "+e.getMessage());
+			System.out.println("[에러] selectAdminMember() 메소드 SQL 명령 오류 = "+e.getMessage());
 		} finally {
 			close(con, pstmt, rs);
 		}
@@ -154,15 +154,15 @@ public class MemberadminDAO extends JdbcDAO{
 					+ " where no=?";
 			
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, member.getUser_addr());
-			pstmt.setString(2, member.getUser_birth());
-			pstmt.setString(3, member.getUser_email());
-			pstmt.setString(4, member.getUser_name());
-			pstmt.setString(5, member.getUser_passwd());
-			pstmt.setString(6, member.getUser_phone());
-			pstmt.setString(7, member.getUser_sex());
-			pstmt.setString(8, member.getUser_zip());
-			pstmt.setString(9, member.getUser_no());
+			pstmt.setString(1, member.getUserAddr());
+			pstmt.setString(2, member.getUserBirth());
+			pstmt.setString(3, member.getUserEmail());
+			pstmt.setString(4, member.getUserName());
+			pstmt.setString(5, member.getUserPasswd());
+			pstmt.setString(6, member.getUserPhone());
+			pstmt.setString(7, member.getUserSex());
+			pstmt.setString(8, member.getUserZip());
+			pstmt.setString(9, member.getUserNo());
 			
 			rows=pstmt.executeUpdate();
 			
@@ -209,22 +209,25 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="insert into member values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql="insert into member values((SELECT LPAD((NVL(MAX(USER_NO), 0) + 1), 8, '0') USER_NO FROM MEMBER),"
+					+ "?,?,?,?,?,?,?,?,sysdate,null,'1',?,?)";
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, member.getUser_no());
-			pstmt.setString(2, member.getUser_id());
-			pstmt.setString(3, member.getUser_passwd());
-			pstmt.setString(4, member.getUser_email());
-			pstmt.setString(5, member.getUser_name());
-			pstmt.setString(6, member.getUser_addr());
-			pstmt.setString(7, member.getUser_sex());
-			pstmt.setString(8, member.getUser_phone());
-			pstmt.setString(9, member.getUser_birth());
-			pstmt.setString(10, member.getUser_zip());
-			pstmt.setDate(11, member.getUser_joindate());
-			pstmt.setDate(12, member.getUser_deldate());
-			pstmt.setString(13, member.getUser_delete());
-			pstmt.setString(14, member.getUser_admin());
+
+			pstmt.setString(1, member.getUserId());
+			pstmt.setString(2, member.getUserPasswd());
+			pstmt.setString(3, member.getUserName());
+			pstmt.setString(4, member.getUserAddr());
+			String sex="1";
+			if(member.getUserSex().equals("남자")) {
+				sex="0";
+			}
+			pstmt.setString(5, sex);
+			pstmt.setString(6, member.getUserPhone());
+			pstmt.setString(7, member.getUserBirth());
+			pstmt.setString(8, member.getUserZip());
+			
+			pstmt.setString(9, member.getUserAdmin());
+			pstmt.setString(10, member.getUserEmail());
 			
 			rows=pstmt.executeUpdate();
 			
