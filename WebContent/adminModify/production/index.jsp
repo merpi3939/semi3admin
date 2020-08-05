@@ -4,6 +4,7 @@
 
 %>    
 <!DOCTYPE html>
+
 <html>
   <head>
     <jsp:include page="jspInclude/headFile.jsp"></jsp:include>

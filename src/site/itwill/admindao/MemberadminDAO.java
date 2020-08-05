@@ -54,7 +54,7 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="select * from member where user_adim='0' order by user_no";
+			String sql="select * from member where user_admin='0' order by user_no";
 			pstmt=con.prepareStatement(sql);
 			
 			rs=pstmt.executeQuery();
@@ -81,7 +81,7 @@ public class MemberadminDAO extends JdbcDAO{
 				memberList.add(member);
 			}
 		} catch (SQLException e) {
-			System.out.println("[에러] selectMember() 메소드 SQL 명령 오류 = "+e.getMessage());
+			System.out.println("[에러] selectRegularMember() 메소드 SQL 명령 오류 = "+e.getMessage());
 		} finally {
 			close(con, pstmt, rs);
 		}
@@ -100,7 +100,7 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="select * from member where user_adim='1' order by user_no";
+			String sql="select * from member where user_admin='1' order by user_no";
 			pstmt=con.prepareStatement(sql);
 			
 			rs=pstmt.executeQuery();
@@ -127,7 +127,7 @@ public class MemberadminDAO extends JdbcDAO{
 				memberList.add(member);
 			}
 		} catch (SQLException e) {
-			System.out.println("[에러] selectMember() 메소드 SQL 명령 오류 = "+e.getMessage());
+			System.out.println("[에러] selectAdminMember() 메소드 SQL 명령 오류 = "+e.getMessage());
 		} finally {
 			close(con, pstmt, rs);
 		}
@@ -209,22 +209,25 @@ public class MemberadminDAO extends JdbcDAO{
 		try {
 			con=getConnection();
 			
-			String sql="insert into member values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql="insert into member values((SELECT LPAD((NVL(MAX(USER_NO), 0) + 1), 8, '0') USER_NO FROM MEMBER),"
+					+ "?,?,?,?,?,?,?,?,sysdate,null,'1',?,?)";
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, member.getUser_no());
-			pstmt.setString(2, member.getUser_id());
-			pstmt.setString(3, member.getUser_passwd());
-			pstmt.setString(4, member.getUser_email());
-			pstmt.setString(5, member.getUser_name());
-			pstmt.setString(6, member.getUser_addr());
-			pstmt.setString(7, member.getUser_sex());
-			pstmt.setString(8, member.getUser_phone());
-			pstmt.setString(9, member.getUser_birth());
-			pstmt.setString(10, member.getUser_zip());
-			pstmt.setDate(11, member.getUser_joindate());
-			pstmt.setDate(12, member.getUser_deldate());
-			pstmt.setString(13, member.getUser_delete());
-			pstmt.setString(14, member.getUser_admin());
+
+			pstmt.setString(1, member.getUser_id());
+			pstmt.setString(2, member.getUser_passwd());
+			pstmt.setString(3, member.getUser_name());
+			pstmt.setString(4, member.getUser_addr());
+			String sex="1";
+			if(member.getUser_sex().equals("남자")) {
+				sex="0";
+			}
+			pstmt.setString(5, sex);
+			pstmt.setString(6, member.getUser_phone());
+			pstmt.setString(7, member.getUser_birth());
+			pstmt.setString(8, member.getUser_zip());
+			
+			pstmt.setString(9, member.getUser_admin());
+			pstmt.setString(10, member.getUser_email());
 			
 			rows=pstmt.executeUpdate();
 			
