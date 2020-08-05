@@ -119,15 +119,15 @@
 		                          <td>
 									 <input type="checkbox" name="check" >
 								  </td>
-		                          <td><%=member.getUser_no() %></td>
-		                          <td><%=member.getUser_name() %></td>
-		                          <td><%=member.getUser_id() %></td>
-		                          <td><%=member.getUser_phone() %></td>
-		                          <td><%=member.getUser_addr() %></td>
-		                          <td><%=member.getUser_zip() %></td>
-		                          <td><%=member.getUser_email() %></td>
-		                          <td><%=member.getUser_birth() %></td>
-		                          <td><%=member.getUser_joindate() %></td>
+		                          <td><%=member.getUserNo() %></td>
+		                          <td><%=member.getUserName() %></td>
+		                          <td><%=member.getUserId() %></td>
+		                          <td><%=member.getUserPhone() %></td>
+		                          <td><%=member.getUserAddr() %></td>
+		                          <td><%=member.getUserZip() %></td>
+		                          <td><%=member.getUserEmail() %></td>
+		                          <td><%=member.getUserBirth() %></td>
+		                          <td><%=member.getUserJoindate() %></td>
 		                        </tr>
 							<% } %>
 						<% } %>

@@ -29,20 +29,20 @@
 	
 	//멤버 인스턴스 만들기
 	MemberDTO member = new MemberDTO();
-	member.setUser_id(user_id);
-	member.setUser_passwd(user_password);
-	member.setUser_email(user_email);
-	member.setUser_name(user_name);
-	member.setUser_addr(user_address);
-	member.setUser_sex(user_sex);
-	member.setUser_phone(user_phone);
-	member.setUser_birth(user_birthday);
-	member.setUser_zip(user_zip);
-	member.setUser_admin(user_admin);
-	member.setUser_deldate(null);
-	member.setUser_delete("0");
-	member.setUser_joindate(null);
-	member.setUser_no(null);
+	member.setUserId(user_id);
+	member.setUserPasswd(user_password);
+	member.setUserEmail(user_email);
+	member.setUserName(user_name);
+	member.setUserAddr(user_address);
+	member.setUserSex(user_sex);
+	member.setUserPhone(user_phone);
+	member.setUserBirth(user_birthday);
+	member.setUserZip(user_zip);
+	member.setUserAdmin(user_admin);
+	member.setUserDeldate(null);
+	member.setUserDelete("0");
+	member.setUserJoindate(null);
+	member.setUserNo(null);
 
 	//MEMBER 테이블에 멤버 인스턴스 삽입하기
 	int rows=MemberadminDAO.getDAO().insertMember(member);

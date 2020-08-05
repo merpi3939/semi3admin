@@ -3,155 +3,161 @@ package site.itwill.admindto;
 import java.sql.Date;
 
 public class MemberDTO {
-	private String user_no;
-	private String user_id;
-	private String user_passwd;
-	private String user_email;
-	private String user_name;
-	private String user_addr;
-	private String user_sex;
-	private String user_phone;
-	private String user_birth;
-	private String user_zip;
-	private Date user_joindate;
-	private Date user_deldate;
-	private String user_delete;
-	private String user_admin;
+	private String userNo;
+	private String userId;
+	private String userPasswd;
+	private String userEmail;
+	private String userName;
+	private String userAddr;
+	private String userSex;
+	private String userPhone;
+	private String userBirth;
+	private String userZip;
+	private String userJoindate;
+	private String userDeldate;
+	private String userDelete;
+	private String userAdmin;
 
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MemberDTO(String user_no, String user_id, String user_passwd, String user_email, String user_name,
-			String user_addr, String user_sex, String user_phone, String user_birth, String user_zip,
-			Date user_joindate, Date user_deldate, String user_delete, String user_admin) {
+	public MemberDTO(String userNo, String userId, String userPasswd, String userEmail, String userName,
+			String userAddr, String userSex, String userPhone, String userBirth, String userZip, String userJoindate,
+			String userDeldate, String userDelete, String userAdmin) {
 		super();
-		this.user_no = user_no;
-		this.user_id = user_id;
-		this.user_passwd = user_passwd;
-		this.user_email = user_email;
-		this.user_name = user_name;
-		this.user_addr = user_addr;
-		this.user_sex = user_sex;
-		this.user_phone = user_phone;
-		this.user_birth = user_birth;
-		this.user_zip = user_zip;
-		this.user_joindate = user_joindate;
-		this.user_deldate = user_deldate;
-		this.user_delete = user_delete;
-		this.user_admin = user_admin;
+		this.userNo = userNo;
+		this.userId = userId;
+		this.userPasswd = userPasswd;
+		this.userEmail = userEmail;
+		this.userName = userName;
+		this.userAddr = userAddr;
+		this.userSex = userSex;
+		this.userPhone = userPhone;
+		this.userBirth = userBirth;
+		this.userZip = userZip;
+		this.userJoindate = userJoindate;
+		this.userDeldate = userDeldate;
+		this.userDelete = userDelete;
+		this.userAdmin = userAdmin;
 	}
 
-	public String getUser_no() {
-		return user_no;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser_no(String user_no) {
-		this.user_no = user_no;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public String getUser_id() {
-		return user_id;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public String getUser_passwd() {
-		return user_passwd;
+	public String getUserPasswd() {
+		return userPasswd;
 	}
 
-	public void setUser_passwd(String user_passwd) {
-		this.user_passwd = user_passwd;
+	public void setUserPasswd(String userPasswd) {
+		this.userPasswd = userPasswd;
 	}
 
-	public String getUser_email() {
-		return user_email;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
-	public void setUser_email(String user_email) {
-		this.user_email = user_email;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public String getUser_addr() {
-		return user_addr;
+	public String getUserAddr() {
+		return userAddr;
 	}
 
-	public void setUser_addr(String user_addr) {
-		this.user_addr = user_addr;
+	public void setUserAddr(String userAddr) {
+		this.userAddr = userAddr;
 	}
 
-	public String getUser_sex() {
-		return user_sex;
+	public String getUserSex() {
+		return userSex;
 	}
 
-	public void setUser_sex(String user_sex) {
-		this.user_sex = user_sex;
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
 	}
 
-	public String getUser_phone() {
-		return user_phone;
+	public String getUserPhone() {
+		return userPhone;
 	}
 
-	public void setUser_phone(String user_phone) {
-		this.user_phone = user_phone;
+	public void setUserPhone(String userPhone) {
+		this.userPhone = userPhone;
 	}
 
-	public String getUser_birth() {
-		return user_birth;
+	public String getUserBirth() {
+		return userBirth;
 	}
 
-	public void setUser_birth(String user_birth) {
-		this.user_birth = user_birth;
+	public void setUserBirth(String userBirth) {
+		this.userBirth = userBirth;
 	}
 
-	public String getUser_zip() {
-		return user_zip;
+	public String getUserZip() {
+		return userZip;
 	}
 
-	public void setUser_zip(String user_zip) {
-		this.user_zip = user_zip;
+	public void setUserZip(String userZip) {
+		this.userZip = userZip;
 	}
 
-	public Date getUser_joindate() {
-		return user_joindate;
+	public String getUserJoindate() {
+		return userJoindate;
 	}
 
-	public void setUser_joindate(Date user_joindate) {
-		this.user_joindate = user_joindate;
+	public void setUserJoindate(String userJoindate) {
+		this.userJoindate = userJoindate;
 	}
 
-	public Date getUser_deldate() {
-		return user_deldate;
+	public String getUserDeldate() {
+		return userDeldate;
 	}
 
-	public void setUser_deldate(Date user_deledate) {
-		this.user_deldate = user_deledate;
+	public void setUserDeldate(String userDeldate) {
+		this.userDeldate = userDeldate;
 	}
 
-	public String getUser_delete() {
-		return user_delete;
+	public String getUserDelete() {
+		return userDelete;
 	}
 
-	public void setUser_delete(String user_delete) {
-		this.user_delete = user_delete;
+	public void setUserDelete(String userDelete) {
+		this.userDelete = userDelete;
 	}
 
-	public String getUser_admin() {
-		return user_admin;
+	public String getUserAdmin() {
+		return userAdmin;
 	}
 
-	public void setUser_admin(String user_admin) {
-		this.user_admin = user_admin;
+	public void setUserAdmin(String userAdmin) {
+		this.userAdmin = userAdmin;
 	}
-
+	
+	
+	
+	
+	
+	
+	
 }//
