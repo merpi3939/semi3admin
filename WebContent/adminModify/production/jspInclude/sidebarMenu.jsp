@@ -58,8 +58,8 @@
 
           <li><a><i class="fa fa-clone"></i> 게시판관리 <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="fixed_sidebar.html">게시판 설정</a></li>
-              <li><a href="fixed_footer.html">게시물 관리</a></li>
+              <li><a href="#">게시판 설정</a></li>
+              <li><a href="boardList.jsp">게시물 관리</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-bar-chart-o"></i> 통계분석 <span class="fa fa-chevron-down"></span></a>
